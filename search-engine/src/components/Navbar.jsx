@@ -1,0 +1,20 @@
+import React from 'react';
+
+export default function Navbar() {
+  return (
+    <div className="navbar">
+      <h1 className="logo">ZYTHERION BIOVANC</h1>
+      <div className="nav-content">
+        <div className="search-bar">
+          <input id="search-input" type="search" placeholder="Know what's out there" />
+        </div>
+        <ul className="nav-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><i className='bx bx-user-circle'></i></li>
+          <li><i className='bx bx-menu-alt-right'></i></li>
+        </ul>
+      </div>
+    </div>
+  );
+}
