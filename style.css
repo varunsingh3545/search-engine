@@ -120,6 +120,7 @@ img, video{
     align-items: center;
     justify-content: center;
     gap: 15px;
+    margin-left: 400px;
     flex-wrap: wrap;
     padding: 10px 0;
 }
@@ -808,3 +809,4 @@ font-size: 30px;
   }
 
 }
+
