@@ -893,7 +893,7 @@ font-size: 30px;
 /* Left-side vertical scroll rail for hero */
 .nex-scroll-rail {
   position: absolute;
-  left: 18px;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -932,7 +932,7 @@ font-size: 30px;
 
 /* Refined left-side scroll rail styling */
 .nex-scroll-rail {
-  left: 24px;
+  left: 14px;
 }
 
 .nex-scroll-label.top,
@@ -987,8 +987,8 @@ font-size: 30px;
 /* Position text exactly relative to the hero container left edge and rail */
 .nex-hero-left {
   position: absolute;
-  top: clamp(100px, 26vh, 280px);
-  left: calc(24px + 4px + 40px); /* 24px rail left + 4px track + 40px */
+  top: clamp(80px, 24vh, 260px);
+  left: calc(14px + 4px + 24px); /* rail left + track + gap */
   max-width: clamp(480px, 42vw, 760px);
 }
 
