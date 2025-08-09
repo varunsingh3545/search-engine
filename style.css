@@ -265,8 +265,8 @@ img, video{
 
  .hero-container {
      width: 100%;
-     max-width: 1200px;
-     margin: 0 auto;
+     max-width: none;
+     margin: 0;
      position: relative; /* anchor scroll rail and hero content */
  }
 
@@ -825,7 +825,7 @@ font-size: 30px;
 .nex-hero-left {
   position: absolute;
   top: 50%; /* vertically center */
-  left: -494px; /* pushed near left edge with 80px gap from scroll bar */
+  left: 100px; /* keep text 100px from the left edge */
   max-width: 400px; /* narrower text block */
   transform: translateY(-50%); /* vertically center adjustment */
   z-index: 120; /* ensure above dashboard/cards and snow */
@@ -1000,14 +1000,14 @@ font-size: 30px;
 
 @media (max-width: 900px) {
   .nex-hero { padding-top: 120px; }
-  .nex-hero-left { position: relative; left: 20px; top: 0; }
+  .nex-hero-left { position: relative; left: 20px; top: 0; transform: none; }
 }
 
 /* Removed readability overlay per request */
 .nex-hero-left {
   position: absolute;
   top: 50%; /* vertically center */
-  left: 94px; /* pushed near left edge with 80px gap from scroll bar */
+  left: 100px; /* keep text 100px from the left edge */
   max-width: 400px; /* narrower text block */
   transform: translateY(-50%); /* vertically center adjustment */
   z-index: 120; /* ensure above dashboard/cards and snow */
