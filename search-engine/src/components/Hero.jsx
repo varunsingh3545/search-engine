@@ -18,7 +18,7 @@ export default function Hero() {
           <div className="search-bar search-bar--center">
             <i className='bx bx-search search-icon' aria-hidden="true"></i>
             <input id="search-input" type="search" placeholder="Search the world’s wonders…" />
-            <div className="search-suggestions">Try searching: <button data-q="Everest">Everest</button>, <button data-q="Himalaya">Himalaya</button>, <button data-q="Wildlife">Wildlife</button></div>
+            <div className="search-suggestions">Try searching: <a href="/results.html?q=Everest">Everest</a>, <a href="/results.html?q=Himalaya">Himalaya</a>, <a href="/results.html?q=Wildlife">Wildlife</a></div>
           </div>
 
           <Dashboard />
