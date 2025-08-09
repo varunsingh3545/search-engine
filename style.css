@@ -929,4 +929,48 @@ font-size: 30px;
   .nex-scroll-rail { display: none; }
 }
 
+/* Refined left-side scroll rail styling */
+.nex-scroll-rail {
+  left: 24px;
+}
+
+.nex-scroll-label.top,
+.nex-scroll-label.bottom {
+  color: rgba(255,255,255,0.8);
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.nex-scroll-track {
+  position: relative;
+  width: 4px;
+  height: 320px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(2px);
+}
+
+.nex-scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(180deg, #ffffff 0%, #bfeaff 100%);
+  box-shadow: 0 0 12px rgba(161, 225, 255, 0.7);
+  border-radius: 999px;
+}
+
+.nex-scroll-thumb {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(111, 212, 255, 0.35), 0 0 20px rgba(111,212,255,0.8);
+}
+
 
