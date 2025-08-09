@@ -810,4 +810,61 @@ font-size: 30px;
 
 }
 
+/* NEXHIKE hero layout overrides */
+ .nex-hero {
+   position: relative;
+   display: flex;
+   align-items: center;
+   height: auto;
+   min-height: 70vh;
+   padding-top: 40px;
+   padding-bottom: 80px;
+ }
+
+.nex-hero-left {
+  position: relative;
+  z-index: 70; /* above snow canvases */
+  max-width: 620px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  margin-left: 40px;
+}
+
+.nex-hero-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  line-height: 1.05;
+  font-size: clamp(32px, 6vw, 64px);
+  margin: 0 0 14px 0;
+}
+
+.nex-hero-desc {
+  font-size: clamp(14px, 1.8vw, 18px);
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 20px;
+}
+
+.nex-hero-cta {
+  background: #ffffff;
+  color: #111;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.nex-hero-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  background: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .nex-hero { min-height: 60vh; padding-bottom: 40px; }
+  .nex-hero-left { margin: 80px 16px 0 16px; }
+}
+
 
