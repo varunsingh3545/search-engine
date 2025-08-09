@@ -867,4 +867,26 @@ font-size: 30px;
   .nex-hero-left { margin: 80px 16px 0 16px; }
 }
 
+/* Everest theme accents for hero */
+.nex-hero-title { color: rgba(235, 245, 255, 0.98); }
+.nex-accent {
+  background: linear-gradient(90deg, #6fd4ff 0%, #a0e0ff 45%, #e6f7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 14px rgba(111, 212, 255, 0.45);
+}
+
+.nex-hero-desc {
+  color: rgba(230, 244, 255, 0.9);
+}
+
+.nex-hero-cta {
+  background: linear-gradient(135deg, rgba(255,255,255,0.95), #e9f6ff);
+  color: #0d2230;
+}
+
+.nex-hero-cta:hover {
+  background: #ffffff;
+}
+
 
