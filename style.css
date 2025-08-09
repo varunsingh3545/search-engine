@@ -974,13 +974,13 @@ font-size: 30px;
 }
 
 /* Optimized hero text placement */
- .nex-hero {
-   min-height: 88vh;
-   align-items: flex-start;
-   padding-top: clamp(72px, 20vh, 240px);
-   padding-left: 280px; /* requested fixed offset from left */
-   padding-bottom: clamp(40px, 10vh, 140px);
- }
+   .nex-hero {
+    min-height: 88vh;
+    align-items: flex-start;
+    padding-top: clamp(72px, 20vh, 240px);
+    padding-left: calc(24px + 4px + 280px); /* 280px from the vertical scroll (24px left + 4px track width) */
+    padding-bottom: clamp(40px, 10vh, 140px);
+  }
 
 .nex-hero-left {
   margin: 0;
@@ -1038,6 +1038,16 @@ font-size: 30px;
 
 @media (max-width: 900px) {
   .nex-hero-left::before { inset: -16px; border-radius: 14px; }
+}
+
+/* Elevate hero text above other UI */
+.nex-hero-left {
+  z-index: 120; /* ensure above dashboard/cards and snow */
+}
+
+/* Remove earlier margin-left to avoid conflicting offsets */
+@media all {
+  .nex-hero-left { margin-left: 0 !important; }
 }
 
 
