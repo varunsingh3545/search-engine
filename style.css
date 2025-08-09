@@ -263,11 +263,12 @@ img, video{
     align-items: center;
 }
 
-.hero-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+ .hero-container {
+     width: 100%;
+     max-width: 1200px;
+     margin: 0 auto;
+     position: relative; /* anchor scroll rail and hero content */
+ }
 
 /* Responsive canvas containers */
 #blizzard-canvas,
@@ -974,21 +975,26 @@ font-size: 30px;
 }
 
 /* Optimized hero text placement */
-   .nex-hero {
-    min-height: 88vh;
-    align-items: flex-start;
-    padding-top: clamp(72px, 20vh, 240px);
-    padding-left: calc(24px + 4px + 280px); /* 280px from the vertical scroll (24px left + 4px track width) */
-    padding-bottom: clamp(40px, 10vh, 140px);
-  }
+/* Remove earlier baseline .nex-hero definition by overriding definitively */
+.nex-hero {
+  position: relative;
+  display: block;
+  min-height: 88vh;
+  padding-top: clamp(72px, 20vh, 240px);
+  padding-bottom: clamp(40px, 10vh, 140px);
+}
 
+/* Position text exactly relative to the hero container left edge and rail */
 .nex-hero-left {
-  margin: 0;
+  position: absolute;
+  top: clamp(120px, 22vh, 260px);
+  left: calc(24px + 4px + 280px); /* 24px rail left + 4px track + 280px */
   max-width: clamp(480px, 42vw, 760px);
 }
 
 @media (max-width: 900px) {
-  .nex-hero { padding-top: 120px; padding-left: 20px; }
+  .nex-hero { padding-top: 120px; }
+  .nex-hero-left { position: relative; left: 20px; top: 0; }
 }
 
 /* Readability overlay behind hero text */
