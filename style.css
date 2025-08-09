@@ -973,4 +973,22 @@ font-size: 30px;
   box-shadow: 0 0 0 3px rgba(111, 212, 255, 0.35), 0 0 20px rgba(111,212,255,0.8);
 }
 
+/* Optimized hero text placement */
+.nex-hero {
+  min-height: 88vh;
+  align-items: flex-start;
+  padding-top: clamp(72px, 20vh, 240px);
+  padding-left: clamp(84px, 9vw, 180px); /* accounts for left rail */
+  padding-bottom: clamp(40px, 10vh, 140px);
+}
+
+.nex-hero-left {
+  margin: 0;
+  max-width: clamp(480px, 42vw, 760px);
+}
+
+@media (max-width: 900px) {
+  .nex-hero { padding-top: 120px; padding-left: 20px; }
+}
+
 
