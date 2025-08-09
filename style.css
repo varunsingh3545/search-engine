@@ -828,7 +828,7 @@ font-size: 30px;
   max-width: 620px;
   color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-  margin-left: -240px;
+  margin-right: 210px;
 }
 
 .nex-hero-title {
@@ -1041,6 +1041,7 @@ font-size: 30px;
 @media all {
   .nex-hero-left { margin-left: 0 !important; }
 }
+
 
 
 
