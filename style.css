@@ -66,7 +66,7 @@ img, video{
 
 .search-bar input{
     height: 50px;
-    width: 100%;
+     min-width: 800px;
     outline: none;
     border: none;
     border-radius: 15px;
@@ -809,4 +809,5 @@ font-size: 30px;
   }
 
 }
+
 
