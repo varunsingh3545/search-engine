@@ -988,7 +988,7 @@ font-size: 30px;
 .nex-hero-left {
   position: absolute;
   top: clamp(120px, 22vh, 260px);
-  left: calc(24px + 4px + 280px); /* 24px rail left + 4px track + 280px */
+  left: calc(24px + 4px + 80px); /* 24px rail left + 4px track + 80px */
   max-width: clamp(480px, 42vw, 760px);
 }
 
