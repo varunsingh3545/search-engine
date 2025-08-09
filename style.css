@@ -974,13 +974,13 @@ font-size: 30px;
 }
 
 /* Optimized hero text placement */
-.nex-hero {
-  min-height: 88vh;
-  align-items: flex-start;
-  padding-top: clamp(72px, 20vh, 240px);
-  padding-left: clamp(84px, 9vw, 180px); /* accounts for left rail */
-  padding-bottom: clamp(40px, 10vh, 140px);
-}
+ .nex-hero {
+   min-height: 88vh;
+   align-items: flex-start;
+   padding-top: clamp(72px, 20vh, 240px);
+   padding-left: 280px; /* requested fixed offset from left */
+   padding-bottom: clamp(40px, 10vh, 140px);
+ }
 
 .nex-hero-left {
   margin: 0;
