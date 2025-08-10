@@ -33,26 +33,27 @@ img, video{
 
 /* Mobile-first responsive navbar */
 .navbar{
-    height: 54px;
-    width: 100%;
-    display: block;
-    background: transparent;
-    backdrop-filter: none;
-    overflow-x: hidden;
+  height: 54px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  background: transparent;
+  backdrop-filter: none;
+  overflow: hidden;
 }
 .navbar-inner{
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 8px;
   height: 54px;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
 }
 /* removed navbar-surface as overall width now set in hero-theme.css */
 
 .navbar-left{ justify-self: start; display:flex; align-items:center; gap:10px; min-width: 200px; }
-.navbar-center{ justify-self: center; display:flex; align-items:center; }
+.navbar-center{ justify-self: center; display:flex; align-items:center; min-width: 0; }
 .navbar-right{ justify-self: end; display: flex; gap: 18px; align-items:center; }
 .icon-btn{ background: transparent; border: 0; color: #ffffff; font-size: 20px; padding: 6px; border-radius: 8px; transition: color .15s ease, background .15s ease, transform .15s ease, box-shadow .15s ease; }
 .icon-btn:hover{ background: rgba(255,255,255,0.08); color: #e9f6ff; transform: translateY(-1px); box-shadow: 0 0 6px rgba(255,255,255,0.25); }
@@ -60,7 +61,7 @@ img, video{
 .brand-strong{ font-weight: 800; }
 .brand-light{ font-weight: 500; opacity: 0.9; }
 /* Mini search pill */
-.navbar-search-mini{ display:flex; align-items:center; gap:8px; width: 260px; height: 34px; border-radius: 999px; background: rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding: 0 14px; }
+.navbar-search-mini{ display:flex; align-items:center; gap:8px; width: 240px; height: 34px; border-radius: 999px; background: rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding: 0 14px; }
 .navbar-search-mini i{ color:#eaf6ff; font-size:18px; }
 .navbar-search-mini input{ flex:1; min-width:0; background: transparent; border:0; outline: none; color:#ffffff; font-size:13px; letter-spacing:0.3px; }
 
