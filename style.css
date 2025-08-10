@@ -40,6 +40,8 @@ img, video{
   background: transparent;
   backdrop-filter: none;
   overflow: hidden;
+  box-sizing: border-box;
+  padding: 0; margin: 0;
 }
 .navbar-inner{
   max-width: 100%;
@@ -49,7 +51,10 @@ img, video{
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
+  box-sizing: border-box;
 }
+.navbar-left, .navbar-center, .navbar-right{ height: 60px; display:flex; align-items:center; }
+.navbar-right .icon-btn, .navbar-right .avatar{ align-self: center; }
 /* removed navbar-surface as overall width now set in hero-theme.css */
 
 .navbar-left{ justify-self: start; display:flex; align-items:center; gap:10px; min-width: 200px; }
