@@ -15,18 +15,18 @@
 
         <!-- Navbar with search bar and nav links -->
         <div class="navbar">
-            <h1 class="logo">ZYTHERION BIOVANC</h1> 
-            <div class="nav-content">
-                <!-- 🔧 Backend Note: Connect this input with search functionality using debounce -->
-                <div class="search-bar"> 
-                    <input id="search-input" type="search" placeholder="Know what's out there">
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><i class='bx bx-user-circle'></i></li>
-                    <li><i class='bx bx-menu-alt-right'></i></li>
-                </ul>
+            <div class="navbar-left">
+              <h1 class="logo">ZYTHERION BIOVANC</h1>
+            </div>
+            <div class="navbar-center">
+              <ul class="nav-links">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar-right">
+              <button class="icon-btn" aria-label="Account"><i class='bx bx-user-circle'></i></button>
+              <button class="icon-btn" aria-label="Menu"><i class='bx bx-menu-alt-right'></i></button>
             </div>
         </div>
 
@@ -47,12 +47,14 @@
 
                 <div class="hero-content nex-hero">
                     <div class="nex-hero-left">
-                        <h1 class="nex-hero-title">Know <span class="nex-accent">What’s Out There</span>.</h1>
-                        <p class="nex-hero-desc">Explore the world’s knowledge with clarity and speed. Discover routes, research, and real‑time insights—all in one search.</p>
-                        <div class="search-bar search-bar-hero">
-                          <input id="search-input-hero" type="search" placeholder="Search the world’s knowledge">
+                        <div class="hero-text-group">
+                          <h1 class="nex-hero-title">Know <span class="nex-accent">What’s Out There</span>.</h1>
+                          <p class="nex-hero-desc">Explore the world’s knowledge with clarity and speed. Discover routes, research, and real‑time insights—all in one search.</p>
+                          <div class="hero-search-group">
+                            <input id="search-input-hero" class="hero-search-input" type="search" placeholder="Search the world’s knowledge">
+                            <button class="nex-hero-cta hero-search-btn">Search</button>
+                          </div>
                         </div>
-                        <button class="nex-hero-cta">Search</button>
                     </div>
                 </div>
 

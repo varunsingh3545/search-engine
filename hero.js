@@ -38,7 +38,7 @@ preload(slides);
     heroBg.appendChild(s);
   });
 
-  // Slider rotation with Ken Burns-like subtle scale
+  // Slider rotation with subtle parallax
   let current = 0;
   const slideEls = Array.from(heroBg.querySelectorAll('.bg-slide'));
   if(slideEls.length && !prefersReduced){
@@ -50,6 +50,13 @@ preload(slides);
       slideEls[current].style.transform = 'scale(1)';
       slideEls[prev].style.transform = `scale(${kenScale})`;
     }, slideInterval);
+
+    // Optional: subtle parallax on scroll
+    window.addEventListener('scroll', ()=>{
+      const y = window.scrollY || 0;
+      const offset = Math.min(40, y * 0.05);
+      slideEls.forEach(el=> el.style.backgroundPosition = `center calc(20% + ${offset}px)`);
+    }, { passive: true });
   }
 
   // Focus behavior -> .search-mode on body

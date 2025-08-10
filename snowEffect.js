@@ -8,10 +8,10 @@ class SnowEffect {
         
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
-        this.particleCount = 150;
-        if (window.innerWidth < 900) { this.particleCount = Math.max(25, Math.round(this.particleCount/3)); }
-        this.maxSpeed = 0.5; // Slow speed
-        this.minSpeed = 0.1;
+        this.particleCount = 120;
+        if (window.innerWidth < 900) { this.particleCount = Math.max(20, Math.round(this.particleCount/4)); }
+        this.maxSpeed = 0.35; // Slower speed
+        this.minSpeed = 0.08;
         
         this.init();
         this.animate();
@@ -44,8 +44,8 @@ class SnowEffect {
         this.ctx.beginPath();
         this.ctx.arc(x, y, radius, 0, Math.PI * 2);
         this.ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
-        this.ctx.shadowBlur = 10;
-        this.ctx.shadowColor = 'rgba(255, 255, 255, 0.8)';
+        this.ctx.shadowBlur = 6;
+        this.ctx.shadowColor = 'rgba(255, 255, 255, 0.5)';
         this.ctx.fill();
         this.ctx.restore();
     }
