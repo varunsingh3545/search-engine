@@ -257,17 +257,19 @@ img, video{
 /* Mobile-first responsive design */
 .hero-section {
     width: 100%;
-    padding: 20px;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
  .hero-container {
-     width: 100%;
-     max-width: 1200px;
-     margin: 0 auto;
      position: relative; /* anchor scroll rail and hero content */
+     width: 100%;
+     min-height: 100vh;
+     min-height: 100dvh;
  }
 
 /* Responsive canvas containers */
@@ -736,7 +738,7 @@ font-size: 30px;
   }
 
   .hero-section{
-    padding: 12px;
+    padding: 0;
   }
 
   .sub-content{
@@ -982,13 +984,14 @@ font-size: 30px;
 
 /* Optimized hero text placement */
 /* Remove earlier baseline .nex-hero definition by overriding definitively */
-.nex-hero {
-  position: relative;
-  display: block;
-  min-height: 88vh;
-  padding-top: clamp(72px, 20vh, 240px);
-  padding-bottom: clamp(40px, 10vh, 140px);
-}
+  .nex-hero {
+   position: relative;
+   display: block;
+   min-height: 100vh;
+   min-height: 100dvh;
+   padding-top: clamp(72px, 20vh, 240px);
+   padding-bottom: clamp(40px, 10vh, 140px);
+ }
 
 /* Position text exactly relative to the hero container left edge and rail */
 .nex-hero-left {
