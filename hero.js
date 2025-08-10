@@ -53,26 +53,28 @@ preload(slides);
   }
 
   // Focus behavior -> .search-mode on body
-  const searchInput = document.getElementById('search-input');
-  if(searchInput){
+    const inputs = [document.getElementById('search-input'), document.getElementById('search-input-hero')].filter(Boolean);
+  const primaryInput = inputs[0] || null;
+  if(inputs.length){
     const onFocus = ()=> document.body.classList.add('search-mode');
     const onBlur = ()=> document.body.classList.remove('search-mode');
-    searchInput.addEventListener('focus', onFocus);
-    searchInput.addEventListener('blur', onBlur);
-    // Ensure accessible label
-    if(!searchInput.getAttribute('aria-label')){
-      searchInput.setAttribute('aria-label','Search');
-    }
+    inputs.forEach(input=>{
+      input.addEventListener('focus', onFocus);
+      input.addEventListener('blur', onBlur);
+      if(!input.getAttribute('aria-label')){
+        input.setAttribute('aria-label','Search');
+      }
+    });
   }
-
+  
   // Trending pills -> fill and submit if present
   const pills = document.querySelectorAll('.trending-row .pill');
-  const form = document.getElementById('hero-search') || searchInput?.form || null;
-  if(pills && searchInput){
+  const form = document.getElementById('hero-search') || primaryInput?.form || null;
+  if(pills && primaryInput){
     pills.forEach(p=>{
       p.addEventListener('click', ()=>{
         const text = p.textContent?.replace(/^\s*[^\w]*\s*/,'').trim() || '';
-        searchInput.value = text;
+        primaryInput.value = text;
         if(form){
           const submitted = form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
           if(!submitted && typeof form.submit === 'function') form.submit();

@@ -22,9 +22,10 @@
   justify-content:space-between;
   padding:12px 18px;
   border-radius: 14px;
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 100%);
+  backdrop-filter: blur(12px) saturate(110%);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
 /* HERO base (map #hero -> .hero-section) */
@@ -59,6 +60,15 @@
   position:absolute; inset:0; z-index:30;
   background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.22) 60%, rgba(0,0,0,0) 100%);
   pointer-events:none;
+}
+
+#hero::after, .hero-section::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 35; /* above base overlay, below text */
+  background: linear-gradient(90deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.18) 35%, rgba(0,0,0,0) 65%);
+  pointer-events: none;
 }
 
 /* hero content */
@@ -127,14 +137,14 @@
 /* Buttons - map to existing CTA */
 .btn{ border-radius: 10px; padding: 12px 22px; font-weight:600; cursor:pointer; transition: all 220ms ease; }
 .btn-primary, .nex-hero-cta, .hero-cta{
-  background: rgba(0,0,0,0.6);
-  color:#fff;
-  border:1px solid rgba(255,255,255,0.06);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  background: linear-gradient(135deg, #00d4ff 0%, #6fd4ff 100%);
+  color:#0b1c28;
+  border:1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,212,255,0.25), 0 0 16px rgba(111,212,255,0.35);
 }
 .btn-primary:hover, .nex-hero-cta:hover, .hero-cta:hover{
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35), 0 0 14px var(--primary);
+  box-shadow: 0 18px 40px rgba(0,212,255,0.35), 0 0 20px rgba(111,212,255,0.55);
   outline: none;
 }
 
