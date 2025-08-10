@@ -3,10 +3,13 @@ class SnowEffect {
     constructor(canvasId) {
         this.canvas = document.getElementById(canvasId);
         if (!this.canvas) return;
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReduced) { this.canvas.style.display = 'none'; return; }
         
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
         this.particleCount = 150;
+        if (window.innerWidth < 900) { this.particleCount = Math.max(25, Math.round(this.particleCount/3)); }
         this.maxSpeed = 0.5; // Slow speed
         this.minSpeed = 0.1;
         
