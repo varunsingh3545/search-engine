@@ -288,7 +288,7 @@ img, video{
 }
 
 #snow-canvas {
-    z-index: 60;
+    z-index: 20; /* between background slides (1) and overlay (30) */
     opacity: 0.45;
 }
 
