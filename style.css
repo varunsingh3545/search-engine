@@ -1032,10 +1032,10 @@ font-size: 30px;
 /* Position text exactly relative to the hero container left edge and rail */
 .nex-hero-left {
   position: absolute;
-  top: 50%; /* vertically center */
-  left: 40px; /* closer to left edge with padding */
-  max-width: 400px; /* narrower text block */
-  transform: translateY(-50%); /* vertically center adjustment */
+  top: 50%;
+  left: 24px;
+  max-width: 520px;
+  transform: translateY(-50%);
 }
 
 @media (max-width: 900px) {
@@ -1046,11 +1046,11 @@ font-size: 30px;
 /* Removed readability overlay per request */
 .nex-hero-left {
   position: absolute;
-  top: 50%; /* vertically center */
-  left: 94px; /* pushed near left edge with 80px gap from scroll bar */
-  max-width: 400px; /* narrower text block */
-  transform: translateY(-50%); /* vertically center adjustment */
-  z-index: 120; /* ensure above dashboard/cards and snow */
+  top: 50%;
+  left: 24px;
+  max-width: 520px;
+  transform: translateY(-50%);
+  z-index: 120;
   color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.6);
   margin-left: 0 !important;
