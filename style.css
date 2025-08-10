@@ -41,14 +41,30 @@ img, video{
     overflow-x: hidden;
 }
 .navbar-inner{
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 20px;
-    height: 54px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 54px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+.navbar-surface{
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 0 16px;
+  max-width: 1120px; /* reduced background width */
+  margin: 0 auto; /* center the surface within 1280 container */
+  background: rgba(0,0,0,0.28);
+  backdrop-filter: blur(14px) saturate(120%);
+  border-radius: 14px;
+}
+@media (max-width: 1280px){
+  .navbar-surface{ max-width: calc(100% - 40px); }
 }
 .navbar-left{ justify-self: start; display:flex; align-items:center; gap:10px; min-width: 200px; }
 .navbar-center{ justify-self: center; display:flex; align-items:center; }
