@@ -63,11 +63,7 @@ preload(slides);
     const inputs = [document.getElementById('search-input'), document.getElementById('search-input-hero')].filter(Boolean);
   const primaryInput = inputs[0] || null;
   if(inputs.length){
-    const onFocus = ()=> document.body.classList.add('search-mode');
-    const onBlur = ()=> document.body.classList.remove('search-mode');
     inputs.forEach(input=>{
-      input.addEventListener('focus', onFocus);
-      input.addEventListener('blur', onBlur);
       if(!input.getAttribute('aria-label')){
         input.setAttribute('aria-label','Search');
       }

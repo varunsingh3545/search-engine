@@ -175,10 +175,7 @@
 #snow-canvas{ position:absolute; inset:0; z-index:40; pointer-events:none; }
 
 /* Focus/overlay intensity */
-body.search-mode #hero::before,
-body.search-mode .hero-section::before{
-  background: linear-gradient(180deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.38) 60%, rgba(0,0,0,0) 100%);
-}
+
 
 /* Focus visible */
 .btn:focus, .nex-hero-cta:focus, .hero-cta:focus{ outline:2px solid rgba(0,212,255,0.18); outline-offset:4px; }
