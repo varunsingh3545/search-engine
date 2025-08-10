@@ -17,7 +17,7 @@
   top: 22px;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(100% - 160px);
+  width: calc(100% - 120px);
   height: 60px;
   z-index: 60;
   display:block;
