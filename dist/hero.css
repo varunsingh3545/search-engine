@@ -1,0 +1,22 @@
+/* Hero background slider basics */
+.hero-container { position: relative; }
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* behind canvases (20) and hero content (120) */
+  overflow: hidden;
+}
+.hero-bg .bg-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  transform: scale(1.06);
+  opacity: 0;
+  transition: opacity 800ms ease, transform 800ms ease;
+  will-change: transform, opacity;
+}
+.hero-bg .bg-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
