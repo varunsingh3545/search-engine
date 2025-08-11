@@ -1018,8 +1018,7 @@ font-size: 30px;
   box-shadow: 0 0 0 3px rgba(111, 212, 255, 0.35), 0 0 20px rgba(111,212,255,0.8);
 }
 
-/* Optimized hero text placement */
-/* Remove earlier baseline .nex-hero definition by overriding definitively */
+
   .nex-hero {
    position: relative;
    display: block;
@@ -1028,6 +1027,10 @@ font-size: 30px;
    padding-top: clamp(72px, 20vh, 240px);
    padding-bottom: clamp(40px, 10vh, 140px);
  }
+
+.hero-text-group{
+   margin-right: 100px;
+}
 
 @media (max-width: 900px) {
   .nex-hero { padding-top: 120px; }
@@ -1066,10 +1069,10 @@ font-size: 30px;
 
 /* Elevate hero text above other UI */
 .nex-hero-left {
-  z-index: 120; /* ensure above dashboard/cards and snow */
+  z-index: 120; 
 }
 
-/* Remove earlier margin-left to avoid conflicting offsets */
+
 @media all {
   .nex-hero-left { margin-left: 0 !important; }
 }
@@ -1082,6 +1085,7 @@ font-size: 30px;
   .search-bar-hero { display: block; width: 100%; max-width: 640px; margin: 12px 16px 0 16px; }
   .search-bar-hero input { width: 100%; }
 }
+
 
 
 
