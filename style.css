@@ -1029,35 +1029,12 @@ font-size: 30px;
    padding-bottom: clamp(40px, 10vh, 140px);
  }
 
-/* Position text exactly relative to the hero container left edge and rail */
-.nex-hero-left {
-  position: absolute;
-  top: 50%;
-  left: 24px;
-  max-width: 520px;
-  transform: translateY(-50%);
-}
-
 @media (max-width: 900px) {
   .nex-hero { padding-top: 120px; }
   .nex-hero-left { position: relative; left: 20px; top: 0; }
 }
 
-/* Removed readability overlay per request */
-.nex-hero-left {
-  position: absolute;
-  top: 50%;
-  left: -124px;
-  max-width: 520px;
-  transform: translateY(-50%);
-  z-index: 120;
-  color: #fff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-  margin-left: 0 !important;
-  padding: 0;
-  isolation: auto;
-    
-}
+
 
 /* Strong, legible title */
 .nex-hero-title {
@@ -1105,6 +1082,7 @@ font-size: 30px;
   .search-bar-hero { display: block; width: 100%; max-width: 640px; margin: 12px 16px 0 16px; }
   .search-bar-hero input { width: 100%; }
 }
+
 
 
 
