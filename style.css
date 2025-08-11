@@ -51,13 +51,14 @@ img, video{
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
+  column-gap: 60px;
   box-sizing: border-box;
 }
 .navbar-left, .navbar-center, .navbar-right{ height: 60px; display:flex; align-items:center; }
 .navbar-right .icon-btn, .navbar-right .avatar{ align-self: center; }
 
 
-.navbar-left{ justify-self: start; display:flex; align-items:center; gap:10px; min-width: 200px; }
+.navbar-left{ justify-self: start; display:flex; align-items:center; gap:10px; min-width: 200px; margin-right: 60px; }
 .navbar-center{ justify-self: center; display:flex; align-items:center; min-width: 0; }
 .navbar-right{ justify-self: end; display: flex; gap: 18px; align-items:center; }
 .icon-btn{ background: transparent; border: 0; color: #ffffff; font-size: 20px; padding: 6px; border-radius: 8px; transition: color .15s ease, background .15s ease, transform .15s ease, box-shadow .15s ease; }
