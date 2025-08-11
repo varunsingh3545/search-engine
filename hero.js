@@ -1,6 +1,6 @@
 // CONFIG
 const slides = [
-  'mount-everest-2560x1440-11019.jpg',
+  'forest.jpg',
   'marine.jpg',
   'climate.jpg'
 ];
