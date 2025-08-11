@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap');
 
+:root { --page-gutter: 20px; }
 
 *{
     margin: 0px;
@@ -38,7 +39,7 @@ img, video{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 var(--page-gutter);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     backdrop-filter: blur(10px);
@@ -291,8 +292,9 @@ img, video{
 
 /* Tablet styles (768px and up) */
 @media screen and (min-width: 768px) {
+    :root { --page-gutter: 40px; }
     .navbar {
-        padding: 0 40px;
+        padding: 0 var(--page-gutter);
         min-height: 70px;
     }
     
@@ -320,8 +322,9 @@ img, video{
 
 /* Desktop styles (1024px and up) */
 @media screen and (min-width: 1024px) {
+    :root { --page-gutter: 60px; }
     .navbar {
-        padding: 0 60px;
+        padding: 0 var(--page-gutter);
         min-height: 80px;
     }
     
@@ -634,6 +637,7 @@ font-size: 30px;
 
 /* Large desktop styles (1440px and up) */
 @media screen and (min-width: 1440px) {
+    :root { --page-gutter: 80px; }
     .nav-content {
         gap: 20px;
     }
@@ -681,7 +685,7 @@ font-size: 30px;
 @media screen and (max-height: 500px) and (orientation: landscape) {
     .navbar {
         min-height: 50px;
-        padding: 5px 20px;
+        padding: 5px var(--page-gutter);
     }
     
     .logo {
@@ -696,6 +700,7 @@ font-size: 30px;
 
 /* Mobile-first overrides for small screens */
 @media screen and (max-width: 767px) {
+  :root { --page-gutter: 12px; }
   .container{
     background-attachment: scroll;
   }
@@ -990,24 +995,24 @@ font-size: 30px;
 }
 
 /* Position text exactly relative to the hero container left edge and rail */
-.nex-hero-left {
+ .nex-hero-left {
   position: absolute;
   top: 50%; /* vertically center */
-  left: 40px; /* closer to left edge with padding */
+  left: var(--page-gutter); /* align with navbar logo gutter */
   max-width: 400px; /* narrower text block */
   transform: translateY(-50%); /* vertically center adjustment */
 }
 
 @media (max-width: 900px) {
   .nex-hero { padding-top: 120px; }
-  .nex-hero-left { position: relative; left: 20px; top: 0; transform: none; }
+  .nex-hero-left { position: relative; left: var(--page-gutter); top: 0; transform: none; }
 }
 
 /* Removed readability overlay per request */
 .nex-hero-left {
   position: absolute;
   top: 50%; /* vertically center */
-  left: 100px; /* keep text 100px from the left edge */
+  left: var(--page-gutter); /* align with navbar logo gutter */
   max-width: 400px; /* narrower text block */
   transform: translateY(-50%); /* vertically center adjustment */
   z-index: 120; /* ensure above dashboard/cards and snow */
