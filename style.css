@@ -185,6 +185,7 @@ img, video{
     color: #ffffff;
     font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     font-weight: 700;
+    margin-right: 60px;
     letter-spacing: -0.5px;
     margin: 0;
     font-size: 18px;
@@ -1085,6 +1086,7 @@ font-size: 30px;
   .search-bar-hero { display: block; width: 100%; max-width: 640px; margin: 12px 16px 0 16px; }
   .search-bar-hero input { width: 100%; }
 }
+
 
 
 
