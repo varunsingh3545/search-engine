@@ -855,11 +855,11 @@ font-size: 30px;
 
 .nex-hero-left {
   position: absolute;
-  top: 50%; /* vertically center */
-  left: -494px; /* pushed near left edge with 80px gap from scroll bar */
-  max-width: 400px; /* narrower text block */
-  transform: translateY(-50%); /* vertically center adjustment */
-  z-index: 120; /* ensure above dashboard/cards and snow */
+  top: 50%;
+  left: -494px;
+  max-width: 400px;
+  transform: translateY(-50%);
+  z-index: 120; 
   color: #fff;
   text-shadow: 0 2px 8px rgba(0,0,0,0.6);
   margin-left: 0 !important;
@@ -1082,6 +1082,7 @@ font-size: 30px;
   .search-bar-hero { display: block; width: 100%; max-width: 640px; margin: 12px 16px 0 16px; }
   .search-bar-hero input { width: 100%; }
 }
+
 
 
 
